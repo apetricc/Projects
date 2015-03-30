@@ -1,0 +1,33 @@
+
+
+main {
+	width: 500px;
+	margin: auto;
+	background: gray;
+	
+	/* when all elements contained in element are 
+	floated, the height of the containing element 
+	becomes 0. Setting overflow: 0 fixes that. */
+
+	overflow: auto;
+}
+
+nav {
+	/* uncomment the next line to get a border around the nav */
+	/* border: 3px solid black; */
+	width: 100px;
+	float: right;
+}
+
+/* remove defaults on the p elements inside the nav */
+nav p {
+	margin: 0;
+	padding: 0;
+}
+
+p {
+	margin: 0; /* remove the default margin on p */
+	float: left;
+	width: 380px; /* 400 - 2*10 = 380 */
+	padding: 10px;
+}

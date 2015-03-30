@@ -1,0 +1,86 @@
+
+/* Protip-- by setting the border-style to dotted for everything on the page you can see where all the borders are more easily!! 
+* {
+	border-style: dotted;
+}
+*/
+
+body {
+	background: #f9e933; /* yellow */
+}
+
+
+header, main, footer {
+	min-width: 855px;
+}
+
+header .container, main .container, footer .container {
+	max-width: 855px;
+	margin: auto;
+}
+
+
+header {
+	background: white;
+	overflow: auto;
+}
+
+header h1 {
+	float: left;
+	width: 570px;
+}
+
+header nav {
+	float: right;
+	width: 285px;
+}
+
+main {
+	background: white;
+}
+
+main .subleft {
+	text-align: left;
+	float: left;
+	width: 285;
+	background: white;
+
+	/*overflow: auto;*/
+	
+}
+
+main p {
+	/*text-align: left;*/
+	
+	width: 175px;
+}
+
+
+main .pic {
+	text-align: right;
+	margin: auto;
+	size: larger;
+	
+}
+
+main .subright {
+	float: right;
+
+	
+}
+
+footer {
+	clear: both;
+}
+
+footer .sitemap {
+	float: right;
+	
+}
+
+footer .contact {
+	float: left;
+	
+
+}
+

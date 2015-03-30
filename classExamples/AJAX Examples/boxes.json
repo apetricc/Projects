@@ -1,0 +1,31 @@
+[
+  {
+    "width" : 120,
+    "height" : 150,
+    "depth" : 30
+  },
+
+   {
+    "width" : 220,
+    "height" : 160,
+    "depth" : 90
+  },
+
+  {
+    "width" : 320,
+    "height" : 250,
+    "depth" : 130
+  },
+
+  {
+    "width" : 20,
+    "height" : 50,
+    "depth" : 3
+  },
+
+  {
+    "width" : 1200,
+    "height" : 1500,
+    "depth" : 300
+  }
+] 

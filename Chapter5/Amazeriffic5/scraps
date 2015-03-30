@@ -1,0 +1,16 @@
+var organizedByTag = [
+                  {
+                      "name" : "shopping",
+                      "toDos": ["Get groceries"]
+                  },
+                  
+                  {
+                      "name" : "chores",
+                      "toDos": ["Get groceries", "Take Trixie to the park"]
+                  },
+                  
+                  {
+                      "name" : "homework",
+                      "toDos": ["Keep working through examples", "Write paper"]
+                  }
+              ];

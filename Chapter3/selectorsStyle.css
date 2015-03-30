@@ -1,0 +1,78 @@
+/* setting the body  background will pass that background on to all
+its descendents like h1, p, etc.  Padding and margin doesn't padd on to
+block-style elements by default though */
+body {
+	margin: 10;
+	padding: 10;
+	background: green;
+}
+
+h1 {
+	margin: 10;
+	padding: 5;
+	background: red;
+	color: blue;
+}
+
+p.first {
+	
+	color: red;
+	margin: 10px;
+	padding: 20px;
+}
+/* I need to remember that making comments in CSS files is
+different than making comments in html files! ☠  */
+
+p.second {
+	color: blue;
+	margin: 20px;
+	padding: 10px;
+}
+
+a {
+	margin: 20px;
+	color: cornflowerblue;
+	text-decoration: none; /* remove the default underline */
+}
+/*this is supposed to change the a item only after it has been clicked*/
+a:visited {
+	color: tomato;
+}
+/*this makes it so the underline only shows while you're hovering over the 
+a item */
+a:hover {
+	text-decoration: underline;
+}
+
+ol {
+	border: 5px solid darksalmon;
+	border-radius: 10px;
+}
+/*
+This would make ONLY li elements that are part of (children of, really)
+ol's 
+
+ol li {
+	color: brown;
+}
+*/
+
+/* We could be more specific and say to only change the color 
+of li elements that are children of a certain class element.  Here
+we select to change the color of li elements that are children of
+the "content" class, which we specify by .content */
+
+.content li {
+	color: brown;
+}
+
+/* set the background of the 1st li elements in both lists to yellow */
+li:first-child {
+	background: yellow;
+	}
+
+/* Likewise, we can select the elements that are 2nd, 3rd, 4th, etc., 
+children by using the nth-child pseudo-class */
+li:nth-child(2) {
+	background: orange;
+}

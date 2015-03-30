@@ -1,0 +1,19 @@
+/*Here is a comment inside a CSS file*/
+
+body {
+	background: lightcyan;
+	width: 800px;			/* Set the body width to 800 pixels */
+	margin: auto;
+}
+
+h1 {
+	color: maroon;
+	text-align: center;
+}
+
+p {
+	color: gray;
+	border: 1px solid gray;
+	padding: 10px;
+}
+
