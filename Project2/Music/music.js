@@ -1,26 +1,47 @@
 (function() {
 	var app = angular.module('music', []);
+    
 
 	app.controller('MusicianController', ['$scope', function($scope) {
-		$scope.name = $scope.genre = $scope.instrument = '';
-		$.getJSON('getMusician', function(result) {
-			$scope.musicians = result;
-		});
+		$scope.name = $scope.genre = $scope.instrument = $scope.age = '';
+        $scope.likes = 0;
+		
+        
+        $scope.all = function() {
+            $.getJSON('getMusician', function(result) {
+                $scope.$apply(function () {
+                    $scope.musicians = result;
+                });
+            });
+        };
 
+        
 		$scope.add = function() {
 			var newMusician = {
 				"name" : $scope.name,
 				"genre" : $scope.genre,
-				"instrument" : $scope.instrument
+				"instrument" : $scope.instrument,
+                "age": $scope.age
+                ,"likes": $scope.likes
 			};
 			$scope.musicians.push(newMusician);
 			$.post('putMusician', newMusician);
-		  $scope.name = $scope.genre = $scope.instrument = '';
+		  $scope.name = $scope.genre = $scope.instrument = $scope.age = '';
+            $scope.likes = 0;
 		};
 		
 		$scope.remove = function(musician) {
 			$scope.musicians.splice($scope.musicians.indexOf(musician), 1);
 			$.post('removeMusician', musician);
-		};									 
+		};
+        
+        $scope.plusOne = function() {
+             
+            $scope.musicians.likes += 1;
+            
+            
+        };
+        //update method that changes it in the database
+        
 	}]);
 }());

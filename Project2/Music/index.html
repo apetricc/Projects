@@ -2,26 +2,35 @@
 <html lang="en" ng-app="music">
 	<head>
 		<title>Musicians!</title>
-		<link rel="stylesheet" type="text/css" href="music.css">
+		<link rel="stylesheet" type="text/css" href="style.css">
 	</head>
 	<body>
 		<div ng-controller="MusicianController">
 			<p>Press 'All' for a complete list of the musicians in our database.</p>
-			<button ng-click>All</button>
+			<button ng-click="all()">All</button>
 			<p>Enter the data for a musician and press submit.</p>
 			<input type="text" ng-model="name" placeholder="name">
 			<input type="text" ng-model="genre" placeholder="genre">
 			<input type="text" ng-model="instrument" placeholder="instrument">
-			<button ng-disabled="!(name.length && genre.length && instrument.length)"
+            <input type="text" ng-model="age" placeholder="age">
+			<button ng-disabled="!(name.length && genre.length && instrument.length && age.length)"
 							ng-click="add()">Add</button>
+                            
 			<table>
 				<tr ng-repeat="m in musicians">
 					<td>{{m.name}}</td>
 					<td>{{m.genre}}</td>
 					<td>{{m.instrument}}</td>
-					<td><button ng-click="$parent.remove(m)">Remove</button></td>
+                    <td>{{m.age}}</td>
+                    <td><button ng-click="$parent.remove(m)">Remove</button></td>
+                    <td><button class="likes" ng-click="m.like = m.like + 1">+{{ m.likes }}</button></td>
+                    <!--<td><button class="likes" ng-click="plusOne()">+{{ m.likes }}</button></td>
+                     <div class="song" ng-repeat="song in songs">
+    <a href="#" ng-click="m.like = m.like + 1">like</a> ({{m.like}}) 
+  </div> -->
 				</tr>
 			</table>
+            
 		</div>
 		<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
 		<script 
