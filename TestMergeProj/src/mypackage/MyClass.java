@@ -4,7 +4,7 @@ public class MyClass {
 
 	public void makeString() {
 		for (int i = 0; i < 5; i++) {
-			if (i < 6) System.out.println("Changed this whole line--hopefully that triggers a conflict.");
+			if (i < 6) System.out.println("will this make a conflict?");
 		}
 		
 	}
